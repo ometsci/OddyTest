@@ -10,6 +10,6 @@ for uploaded_file in uploaded_files:
     st.image(uploaded_file)
 
 if len(uploaded_files) > 0:
-    st.button('Rate coupons')
+    st.sidebar.button('Rate coupons')
     # Currently only downloads last image
-    st.download_button("Download processed images", data=uploaded_file, file_name="Processed images.jpg")
+    st.sidebar.download_button("Download processed images", data=uploaded_file, file_name="Processed images.jpg")
