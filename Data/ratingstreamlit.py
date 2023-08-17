@@ -1,3 +1,4 @@
+import streamlit as st
 st.title('Oddy Test Coupon Rating')
 
 # Drag and drop upload box
