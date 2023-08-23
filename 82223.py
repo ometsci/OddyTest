@@ -51,7 +51,7 @@ LABEL_FILENAME = 'StringIntLabelMap.pbtxt'
 PATH_TO_LABELS = download_labels(LABEL_FILENAME)
 
 # Load the model
-import time
+# import time
 from object_detection.utils import label_map_util
 from object_detection.utils import config_util
 from object_detection.utils import visualization_utils as viz_utils
@@ -60,7 +60,7 @@ from object_detection.builders import model_builder
 PATH_TO_CFG = PATH_TO_MODEL_DIR + "/pipeline.config"
 PATH_TO_CKPT = PATH_TO_MODEL_DIR + "/checkpoint"
 
-start_time = time.time()
+# start_time = time.time()
 
 # Load pipeline config and build a detection model
 configs = config_util.get_configs_from_pipeline_file(PATH_TO_CFG)
@@ -74,9 +74,9 @@ ckpt.restore(os.path.join(PATH_TO_CKPT, 'ckpt-49')).expect_partial()
 #Upload images
 uploaded_files = st.file_uploader("Choose an image file", type=['png', 'jpg', 'tiff'], accept_multiple_files=True)
 
-end_time = time.time()
-elapsed_time = end_time - start_time
-st.success('Model load complete! Took {} seconds'.format(elapsed_time))
+# end_time = time.time()
+# elapsed_time = end_time - start_time
+# st.success('Model load complete! Took {} seconds'.format(elapsed_time))
 
 # Load label map data (for plotting)
 category_index = label_map_util.create_category_index_from_labelmap(PATH_TO_LABELS,
