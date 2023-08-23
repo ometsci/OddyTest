@@ -9,7 +9,8 @@ st.title('Oddy Test Coupon Rating')
 
 import os
 # os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2'    # Suppress TensorFlow logging (1)
-# import pathlib
+import pathlib
+from pathlib import Path
 import tensorflow as tf
 
 # tf.get_logger().setLevel('ERROR')           # Suppress TensorFlow logging (2)
@@ -43,7 +44,7 @@ def download_labels(filename):
     label_dir = tf.keras.utils.get_file(fname=filename,
                                         origin=base_url + filename,
                                         untar=False)
-    # label_dir = pathlib.Path(label_dir)
+    label_dir = pathlib.Path(label_dir)
     print("Labels reloaded")
     return str(label_dir)
 
