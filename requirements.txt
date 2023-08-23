@@ -1,5 +1,7 @@
 streamlit
 pandas
 numpy
+pathlib
 tensorflow==2.11.0
 Pillow
+
