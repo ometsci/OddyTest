@@ -40,7 +40,7 @@ PATH_TO_MODEL_DIR = download_model(MODEL_NAME, MODEL_DATE)
 # Download labels file
 @st.cache_resource
 def download_labels(filename):
-    base_url = 'https://github.com/fredthefish/OddyTest/blob/main/Data/StringIntLabelMap.pbtxt'
+    base_url = 'https://github.com/fredthefish/OddyTest/blob/main/Data/'
     label_dir = tf.keras.utils.get_file(fname=filename,
                                         origin=base_url + filename,
                                         untar=False)
