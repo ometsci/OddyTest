@@ -3,7 +3,6 @@ pandas
 numpy
 pathlib
 tensorflow==2.11.0
-pillow
 zipfile
 base64
 io
