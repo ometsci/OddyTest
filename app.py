@@ -6,7 +6,7 @@ from PIL import Image
 import zipfile
 import base64
 import io
-import tf-models-official
+import tensorflow_models as tfm
 import os
 
 def print_folder_structure(folder_path):
