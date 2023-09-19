@@ -7,6 +7,8 @@ import zipfile
 import base64
 import io
 
+pip show tensorflow 
+
 # Set web app title
 st.title("Oddy Coupon Rating")
 st.warning("If you are not using The Met's Photography and Oddy Testing [protocols](https://www.conservation-wiki.com/wiki/Oddy_Test_Protocols#Metropolitan_Museum_of_Art_.28MMA.29_Protocol), the ratings are unlikely to be meaningful.")
