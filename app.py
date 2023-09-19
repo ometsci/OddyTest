@@ -27,7 +27,7 @@ import git
 # else:
 #     print(f"Folder not found: {folder_path}")
 
-print(cd)
+os.getcwd()
 
 
 # Set web app title
