@@ -27,8 +27,8 @@ import git
 # else:
 #     print(f"Folder not found: {folder_path}")
 
-cd /home/appuser/venv/lib/python3.9/site-packages/tensorflow
-git clone https://github.com/tensorflow/models.git models
+cd '/home/appuser/venv/lib/python3.9/site-packages/tensorflow'
+git clone 'https://github.com/tensorflow/models.git'
 
 
 # Set web app title
