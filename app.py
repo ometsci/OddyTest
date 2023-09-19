@@ -6,26 +6,30 @@ from PIL import Image
 import zipfile
 import base64
 import io
-import tensorflow_models as tfm
 import os
+import git
 
-def print_folder_structure(folder_path):
-    for root, dirs, files in os.walk(folder_path):
-        level = root.replace(folder_path, '').count(os.sep)
-        indent = ' ' * 4 * (level)
-        print(f"{indent}{os.path.basename(root)}/")
-        subindent = ' ' * 4 * (level + 1)
-        for file in files:
-            print(f"{subindent}{file}")
+# def print_folder_structure(folder_path):
+#     for root, dirs, files in os.walk(folder_path):
+#         level = root.replace(folder_path, '').count(os.sep)
+#         indent = ' ' * 4 * (level)
+#         print(f"{indent}{os.path.basename(root)}/")
+#         subindent = ' ' * 4 * (level + 1)
+#         for file in files:
+#             print(f"{subindent}{file}")
 
-# Replace 'folder_path' with the path to the folder you want to print
-folder_path = '/home/appuser/venv/lib/python3.9/site-packages/tensorflow/models'
+# # Replace 'folder_path' with the path to the folder you want to print
+# folder_path = '/home/appuser/venv/lib/python3.9/site-packages/tensorflow/models'
 
-if os.path.exists(folder_path):
-    print(f"Folder structure of: {folder_path}")
-    print_folder_structure(folder_path)
-else:
-    print(f"Folder not found: {folder_path}")
+# if os.path.exists(folder_path):
+#     print(f"Folder structure of: {folder_path}")
+#     print_folder_structure(folder_path)
+# else:
+#     print(f"Folder not found: {folder_path}")
+
+cd /home/appuser/venv/lib/python3.9/site-packages/tensorflow
+git clone https://github.com/tensorflow/models.git models
+
 
 # Set web app title
 st.title("Oddy Coupon Rating")
