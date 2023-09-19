@@ -19,7 +19,7 @@ def print_folder_structure(folder_path):
             print(f"{subindent}{file}")
 
 # Replace 'folder_path' with the path to the folder you want to print
-folder_path = '/home/appuser/venv/lib/python3.9/site-packages/tensorflow'
+folder_path = '/home/appuser/venv/lib/python3.9/site-packages/tensorflow/models'
 
 if os.path.exists(folder_path):
     print(f"Folder structure of: {folder_path}")
