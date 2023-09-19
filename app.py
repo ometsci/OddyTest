@@ -7,7 +7,25 @@ import zipfile
 import base64
 import io
 
-pip show tensorflow 
+import os
+
+def print_folder_structure(folder_path):
+    for root, dirs, files in os.walk(folder_path):
+        level = root.replace(folder_path, '').count(os.sep)
+        indent = ' ' * 4 * (level)
+        print(f"{indent}{os.path.basename(root)}/")
+        subindent = ' ' * 4 * (level + 1)
+        for file in files:
+            print(f"{subindent}{file}")
+
+# Replace 'folder_path' with the path to the folder you want to print
+folder_path = '/home/appuser/venv/lib/python3.9/site-packages/'
+
+if os.path.exists(folder_path):
+    print(f"Folder structure of: {folder_path}")
+    print_folder_structure(folder_path)
+else:
+    print(f"Folder not found: {folder_path}")
 
 # Set web app title
 st.title("Oddy Coupon Rating")
